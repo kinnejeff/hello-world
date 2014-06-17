@@ -25,55 +25,19 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
-<script>
-function testPrime() {
-  var x = parseInt(document.getElementById("num").value);
-  document.getElementById("answer").innerHTML = "Computing answer...";
-
-  var isprime = 1;
-
-  if (x > 1234567890123493) {
-    document.getElementById("answer").innerHTML = "Number too big...";
-    return;
-  }
-
-  if (x == 2) {
-    document.getElementById("answer").innerHTML = "Prime!!";
-    return;
-  }
-
-  if (x % 2 == 0) {
-    document.getElementById("answer").innerHTML = "Not prime";
-    return;
-  }
-
-  for(var i=3; i*i <= x; i += 2) {
-    if (x % i == 0) {
-      isprime = 0; break;
-    }
-  }
-
-
-  if (isprime) 
-    document.getElementById("answer").innerHTML = "Prime!!";
-  else 
-    document.getElementById("answer").innerHTML = "Not Prime";
-}
-</script>
     </head>
     <body>
-
-<h1>A prime testing program...</h1>
-
-<input id="num">
-<button id="click" onclick="testPrime()">Test if number is prime</button>
-
-<p id="answer"> </p>
-      
-      <script type="text/javascript" src="phonegap.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
-      <script type="text/javascript">
-        app.initialize();
-      </script>
+        <div class="app">
+            <h1>PhoneGap</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
     </body>
 </html>
